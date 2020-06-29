@@ -4,13 +4,14 @@ You can edit this file as you like.
 -}
 { name = "my-project"
 , dependencies =
-  [ "console"
+  [ "aff"
+  , "console"
   , "effect"
+  , "gimel"
   , "psci-support"
   , "react"
   , "react-dom"
-  , "gimel"
-  , "aff"
+  , "react-mui"
   , "web-html"
   ]
 , packages = ./packages.dhall
