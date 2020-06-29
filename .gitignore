@@ -5,3 +5,4 @@ dist
 node_modules
 output
 .parcel-cache
+.psci_modules
