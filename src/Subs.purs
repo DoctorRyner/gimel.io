@@ -1,7 +1,7 @@
 module Subs where
 
-import Gimel.Sub (Sub)
+import Gimel.Sub (Sub, none)
 import Types (Event, Model)
 
-subs :: Array (Sub Model Event)
-subs = []
+subs :: Sub Model Event
+subs = none

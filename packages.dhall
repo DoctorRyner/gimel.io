@@ -7,7 +7,7 @@ let additions =
     { gimel =
         { dependencies = [ "prelude", "css", "js-timers" ]
         , repo         = "https://github.com/DoctorRyner/gimel"
-        , version      = "c2b5892486dd2ba069e4c7157353df173abf2592"
+        , version      = "v0.1-alpha"
         }
     , react-mui =
         { dependencies = [ "tscompat" ]
