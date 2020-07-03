@@ -9,6 +9,11 @@ let additions =
         , repo         = "https://github.com/DoctorRyner/gimel"
         , version      = "v0.1-alpha"
         }
+    , gimel-router =
+        { dependencies = [ "prelude" ]
+        , repo         = "https://github.com/DoctorRyner/gimel-router"
+        , version      = "master"
+        }
     , react-mui =
         { dependencies = [ "tscompat" ]
         , repo         = "https://github.com/doolse/purescript-react-mui"

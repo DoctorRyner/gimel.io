@@ -8,6 +8,7 @@ You can edit this file as you like.
   , "console"
   , "effect"
   , "gimel"
+  , "gimel-router"
   , "psci-support"
   , "react"
   , "react-dom"

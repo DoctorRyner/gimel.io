@@ -3,26 +3,26 @@ module View where
 import Prelude
 
 import Data.Array (fold, singleton)
-import Gimel.Attributes (href, style)
-import Gimel.Html (Html, h1, h3, text)
-import Gimel.MaterialUI (appBar, box, container, link, toolbar)
-import Gimel.Router (browserRouter, exact, path, route, switch)
+import Gimel.Attributes (href, (=:), style)
+import Gimel.Html (Html, span, h1, h3, text)
+import Gimel.MaterialUI (appBar, box, container, toolbar)
+import Gimel.React.Router (browserRouter, exact, path, route, switch, link)
 import Types (Event, Model)
 import View.NotFound as NotFound
 
 view :: Model -> Html Event
-view _ = fold
-  [ header
-  , container []
-    [ box [style {marginTop: "115px"}] [router]
-    ]
+view _ = container []
+  [ box [style {marginTop: "115px"}] [router]
   ]
  where
-  router = browserRouter [] $ singleton $ switch []
-    [ route [exact true, path "/"] [text "root"]
-    , route [path "/docs"] [text "docs"]
-    , route [path "/try"] [text "try"]
-    , route [] [NotFound.view]
+  router = browserRouter []
+    [ header
+    , switch []
+      [ route [exact true, path "/"] [text "root"]
+      , route [path "/docs"] [text "docs"]
+      , route [path "/try"] [text "try"]
+      , route [] [NotFound.view]
+      ]
     ]
 
 header :: Html Event
@@ -45,8 +45,8 @@ header = appBar []
   ]
 
 whiteLink :: forall event. String -> Html event -> Html event
-whiteLink path el =
-  link [href path, style {color: "white", marginRight: "25px"}] [el]
+whiteLink path el = 
+  link ["to" =: path, style {color: "white", marginRight: "25px"}] [el]
 
 whiteLinkBold :: forall event. String -> Html event -> Html event
 whiteLinkBold path el =
