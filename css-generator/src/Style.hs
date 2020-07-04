@@ -3,4 +3,9 @@ module Style where
 import Clay
 
 css :: Css
-css = body ? do fontFamily ["Robot"] []
+css = do
+  body ? do fontFamily ["Roboto"] []
+
+  ".underlineOnHover" ? do
+    textDecoration none
+    hover & textDecoration underline
