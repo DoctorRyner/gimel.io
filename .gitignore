@@ -6,3 +6,6 @@ node_modules
 output
 .parcel-cache
 .psci_modules
+.stack-work/
+*.cabal
+static/css/generated/*.css

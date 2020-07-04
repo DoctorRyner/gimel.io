@@ -1,0 +1,12 @@
+name:                css-generator
+
+dependencies:
+- base >= 4.7 && < 5
+- clay
+- text
+
+default-extensions:
+- OverloadedStrings
+
+library:
+  source-dirs: src
