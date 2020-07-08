@@ -6,6 +6,7 @@ import Gimel.Attributes (className, style)
 import Gimel.Html (Html, h1, h3, text)
 import Gimel.MaterialUI (appBar, box, container, toolbar, link)
 import Gimel.React.Router (browserRouter, exact, path, route, switch, to)
+import Types (Model, Event)
 import View.NotFound as NotFound
 
 view :: Model -> Html Event
